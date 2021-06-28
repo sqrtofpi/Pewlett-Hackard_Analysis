@@ -11,35 +11,25 @@ Pewlett-Hackard's human resources department has enlisted the help of my colleag
 
 Having imported all of the tables into PostgreSQL and established the proper linkages between the tables 'keying' off of the replicate data from each table, we first created a table named retirement_titles.csv. With this new file we have joined information from an Employees table and Titles table to create a list of employees born between 1952 and 1955. The issue with this first analysis is it created a dataset where some employees occured more than once due to them switching titles over the years working with Pewlett-Hackard. See illustration:
 
-
-
-
+![Retirement Titles Output Example](https://github.com/sqrtofpi/Pewlett-Hackard_Analysis/blob/d30fa3d45415ac940f831db0def1fb370bfb7696/Data/retirement_titles%20output%20example.png)
 
 #### 2. Eliminating duplicates in the list of retirees
 
 Due to the duplicates in analysis 1, we then created a new query to retrieve the first occurrence of the employee number from the retirement_titles.csv file. This successfully removed duplicate entries for each employee. See illustration:
 
-
-
-
+![Unique Titles Output Example](https://github.com/sqrtofpi/Pewlett-Hackard_Analysis/blob/d30fa3d45415ac940f831db0def1fb370bfb7696/Data/unique_titles%20output%20example.png)
 
 #### 3. Grouping the retirees by title and sorting in descending order
 
  Finally, we used another query to retrieve the number of employees by their most recent job title who are about to retire. This was accomplished by retrieving the number of titles from the unique titles table, then creating a retiring titles table to hold the required information. We then grouped the table by title and sorted the count column in descending order. See illustration:
 
-
-
-
+![Retiring Titles Output Example](https://github.com/sqrtofpi/Pewlett-Hackard_Analysis/blob/d30fa3d45415ac940f831db0def1fb370bfb7696/Data/retiring_titles%20output%20example.png)
 
 #### 4. Creating a mentorship eligibility file
 
 In light of this information, we have created another table named mentorship_eligibility.csv which holds a listing of the employees who are eligible to participate in a mentorship program ordered by the employee number. See illustration:
 
-
-
-
-
-
+![Mentor Eligibility Output Example](https://github.com/sqrtofpi/Pewlett-Hackard_Analysis/blob/d30fa3d45415ac940f831db0def1fb370bfb7696/Data/mentor_eligibility%20output%20example.png)
 
 ## Summary:
 
